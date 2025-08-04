@@ -1,0 +1,44 @@
+.references-section {
+  background: #f6f8fa;
+  border-top: 2.5px solid #00bfae;
+  padding: 1.33rem 2vw .95rem 2vw;
+  margin-top: 0.22rem;
+  font-size: 1rem;
+  color: #1a237e;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.references-section h3 {
+  font-size: 1.18rem;
+  margin-bottom: .65rem;
+  color: #00bfae;
+  font-weight: 700;
+}
+
+.references-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.references-section li {
+  margin-bottom: 0.6rem;
+}
+
+.references-section a {
+  font-weight: 600;
+  color: #1a237e;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+.references-section a:hover {
+  color: #1976d2;
+}
+
+.ref-desc {
+  font-size: 0.98em;
+  color: #35395c;
+}
