@@ -1,0 +1,13 @@
+<div class="searchbar-wrapper">
+  <input
+    type="text"
+    class="search-input"
+    [placeholder]="'Search LLMs (name, description, features, provider)'"
+    [value]="search"
+    (input)="onInput($event)"
+  />
+  <select class="provider-select" [value]="provider" (change)="onProviderChange($event)">
+    <option value="">All Providers</option>
+    <option *ngFor="let p of availableProviders" [value]="p">{{ p }}</option>
+  </select>
+</div>

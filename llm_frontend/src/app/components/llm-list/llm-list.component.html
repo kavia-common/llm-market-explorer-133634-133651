@@ -1,0 +1,22 @@
+<div *ngIf="isLoading" class="llm-list-loading">
+  Loading LLMs...
+</div>
+<div *ngIf="!isLoading && llms.length === 0" class="llm-list-empty">
+  No LLMs found.
+</div>
+<div class="llm-list" *ngIf="!isLoading && llms.length > 0">
+  <div class="llm-card" *ngFor="let llm of llms" (click)="gotoDetails()">
+    <div class="llm-card-header">
+      <span class="llm-card-name">{{ llm.name }}</span>
+      <span class="llm-card-provider">{{ llm.provider }}</span>
+    </div>
+    <div class="llm-card-description">{{ llm.description }}</div>
+    <div class="llm-card-tags">
+      <span *ngFor="let cat of llm.categories" class="llm-tag">{{ cat }}</span>
+      <span *ngFor="let f of llm.features" class="llm-feature">{{ f }}</span>
+    </div>
+    <div class="llm-card-price">
+      <span *ngIf="llm.price !== undefined">💲 {{ llm.price }}{{ llm.currency || ' USD' }}</span>
+    </div>
+  </div>
+</div>

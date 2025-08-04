@@ -1,0 +1,17 @@
+<div *ngIf="llm as lm; else loading" class="llm-detail">
+  <h2>{{ lm.name }}</h2>
+  <div class="llm-provider">Provider: <b>{{ lm.provider }}</b></div>
+  <div class="llm-desc">{{ lm.description }}</div>
+  <div class="llm-tags">
+    <span class="llm-tag" *ngFor="let c of lm.categories">{{ c }}</span>
+    <span class="llm-feature" *ngFor="let f of lm.features">{{ f }}</span>
+  </div>
+  <div class="llm-detail-price">
+    <b>Price:</b> ${{ lm.price }}{{ lm.currency || ' USD' }}
+  </div>
+</div>
+<ng-template #loading>
+  <div class="llm-detail-loading">
+    Loading LLM details...
+  </div>
+</ng-template>

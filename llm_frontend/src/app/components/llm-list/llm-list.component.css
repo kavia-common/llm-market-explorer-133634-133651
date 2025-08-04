@@ -1,0 +1,76 @@
+.llm-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.llm-card {
+  background: #fff;
+  border: 1px solid #e6ecfa;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(30,40,120,0.03);
+  padding: 1.1rem 1.2rem .8rem 1.2rem;
+  width: 320px;
+  min-height: 180px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  transition: box-shadow .15s;
+}
+.llm-card:hover {
+  box-shadow: 0px 6px 24px rgba(30,50,150,0.14);
+  border-color: #8e99f3;
+}
+.llm-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: .25rem;
+}
+.llm-card-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a237e;
+}
+.llm-card-provider {
+  color: #00bfae;
+  font-size: .97rem;
+  font-weight: 400;
+}
+.llm-card-description {
+  font-size: 0.97rem;
+  color: #35395c;
+  margin-bottom: 0.4rem;
+}
+.llm-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.3rem;
+}
+.llm-tag, .llm-feature {
+  font-size: .83rem;
+  background: #8e99f337;
+  color: #1a237e;
+  border-radius: 4px;
+  padding: 2px 7px;
+  margin-right: 4px;
+}
+.llm-tag { font-weight: 500; }
+.llm-feature { font-style: italic; color: #00bfae; }
+.llm-card-price {
+  margin-top: auto;
+  font-weight: 600;
+  color: #1976d2;
+}
+.llm-list-loading, .llm-list-empty {
+  margin: 2.5rem auto 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .llm-card { width: 95vw; min-width: 0; }
+  .llm-list { gap: 1rem; }
+}
