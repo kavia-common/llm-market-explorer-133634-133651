@@ -1,0 +1,23 @@
+<div class="catalog-layout">
+  <aside>
+    <app-category-sidebar [categories]="categories" [selected]="selectedCategory" (selectCategory)="setCategory($event)" />
+  </aside>
+  <main>
+    <div class="catalog-header">
+      <app-search-bar
+        [search]="search"
+        [provider]="selectedProvider"
+        [availableProviders]="providers"
+        (searchChange)="setSearch($event)"
+        (providerChange)="setProvider($event)"
+      />
+    </div>
+    <section>
+      <app-llm-list [llms]="filteredLlms" [isLoading]="isLoading"></app-llm-list>
+    </section>
+    <section class="cost-section">
+      <h2>Cost Comparison</h2>
+      <app-cost-comparison [data]="costData"></app-cost-comparison>
+    </section>
+  </main>
+</div>

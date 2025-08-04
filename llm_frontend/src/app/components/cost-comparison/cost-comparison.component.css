@@ -1,0 +1,17 @@
+.cost-comparison-chart {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  background: #f6f8fa;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 210px;
+}
+.cost-comparison-table {
+  padding: 1rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+@media (max-width:750px) {
+  .cost-comparison-chart { min-width: 350px; }
+}

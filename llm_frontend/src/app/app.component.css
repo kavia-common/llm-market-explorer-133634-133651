@@ -1,0 +1,19 @@
+.main-header {
+  background: #218c33; /* Changed from blue (#1a237e) to green */
+  padding: 1.5rem 2vw 1.1rem 2vw;
+  color: #fff;
+  border-bottom: 3.5px solid #32cf55; /* Green accent border, was #00bfae */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.main-desc {
+  font-size: 1.1rem;
+  color: #70db89;   /* Lighter green, replaces #8e99f3 */
+  margin-top: 7px;
+  margin-bottom: 0.1em;
+}

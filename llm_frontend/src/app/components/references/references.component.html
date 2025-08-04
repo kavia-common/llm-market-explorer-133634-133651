@@ -1,0 +1,9 @@
+<section class="references-section">
+  <h3>References & Resources</h3>
+  <ul>
+    <li *ngFor="let ref of references">
+      <a [href]="ref.url" target="_blank" rel="noopener noreferrer">{{ ref.title }}</a>
+      <div class="ref-desc">{{ ref.desc }}</div>
+    </li>
+  </ul>
+</section>

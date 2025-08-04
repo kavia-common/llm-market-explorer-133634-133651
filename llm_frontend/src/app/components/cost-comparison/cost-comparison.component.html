@@ -1,0 +1,29 @@
+<div class="cost-comparison-chart" *ngIf="values.length">
+  <svg
+    width="100%"
+    height="210"
+    viewBox="0 0 900 210"
+    [attr.aria-label]="'Cost Comparison Bar Chart'"
+    style="max-width: 100%;"
+  >
+    <g *ngFor="let value of values; let i = index">
+      <rect
+        [attr.x]="20"
+        [attr.y]="20 + 40*i"
+        [attr.width]="(values[i] / maxValue) * 800"
+        height="30"
+        fill="#8e99f3"
+        rx="8"
+      ></rect>
+      <text x="825" [attr.y]="40 + 40*i" text-anchor="start" alignment-baseline="middle" fill="#1976d2">
+        ${{ values[i].toFixed(2) }}
+      </text>
+      <text x="24" [attr.y]="40 + 40*i" alignment-baseline="middle" font-size="14" fill="#1a237e">
+        {{ labels[i] }}
+      </text>
+    </g>
+  </svg>
+</div>
+<div class="cost-comparison-table" *ngIf="!values.length">
+  No cost comparison data.
+</div>

@@ -1,0 +1,19 @@
+<nav class="category-nav">
+  <ul>
+    <li
+      [class.selected]="!selected"
+      (click)="select(null)"
+      tabindex="0"
+    >
+      All Categories
+    </li>
+    <li
+      *ngFor="let c of categories"
+      [class.selected]="c === selected"
+      (click)="select(c)"
+      tabindex="0"
+    >
+      {{ c }}
+    </li>
+  </ul>
+</nav>
